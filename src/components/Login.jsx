@@ -254,13 +254,13 @@ export default function Login() {
             </motion.button>
           )}
         </div>
-        <div className="flex items-center justify-between gap-16">
+        {/* <div className="flex items-center justify-between gap-16">
           <div className="w-12 h-[1px] rounded-md bg-white"></div>
           <p className="text-white">or</p>
           <div className="w-12 h-[1px] rounded-md bg-white"> </div>
-        </div>
+        </div> */}
 
-        <motion.div
+        {/* <motion.div
           {...buttonClick}
           className="flex items-center justify-center px-20 py-2 bg-lightOverlay background-blur-md cursor-pointer rounded-3xl gap-4"
           // onClick={loginwithGoogle}
@@ -269,7 +269,7 @@ export default function Login() {
           <p className="capitalize text-base text-textColor">
             Signin with Google
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
