@@ -53,12 +53,12 @@ else{
     }
   return (
     <>
-     <div className="static w-full h-full bg-lightBackground ">
-    <Header/>
-   
-    <div className='absolute left-[30%] top-[10%]  '>
+     <div className="w-full h-full bg-lightBackground ">
 
-      <div className="flex flex-col items-center bg-lightOverlay w-[80%] md:w-508  z-10 backdrop-blur-md p-4 px-4 py-12 gap-6">
+
+    <div className='absolute left-[34%] top-[10%]'> 
+
+      <div className="flex flex-col items-center justify center bg-lightOverlay w-[80%] md:w-508  z-10 backdrop-blur-md p-4 px-4 py-12 gap-6">
       
 
         <p className="text-3xl font-semibold text-headingColor ">
@@ -129,23 +129,12 @@ else{
             >
               Reset Password
             </motion.button>
-            
-         
-        
-         
-         
-            
-            
-               
 
-   
-        
-       
             </div>
           
       </div>
     </div>
-    </div>
+  </div>
     </>
   )
 }

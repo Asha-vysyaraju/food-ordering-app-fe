@@ -21,6 +21,8 @@ import AuthRoute from './components/AuthRoute'
 import PaymentPage from './components/PaymentPage';
 import OrderTrackPage from './components/OrderTrackPage';
 import ProfilePage from './components/ProfilePage';
+import OrdersPage from './components/OrdersPage';
+import Menu from './components/Menu';
 
 function App() {
   const { showLoading, hideLoading,isLoading } = useLoading();
@@ -33,13 +35,16 @@ function App() {
       <motion.div {...fadeInOut} className='fixed z-50 inset-0 bg-lightOverlay backdrop-blur-md flex items-center justify-center w-full'> 
     <MainLoader/>
     </motion.div> )}
-    {/* <div className="w-screen h-auto flex flex-col bg-primary">
-      {/* <Header /> */}
-      {/* <main className="mt-14 md:mt-20 px-4 md:px-16 py-4 w-full">  */}
+    <div className='w-screen min-h-screen flex flex-col items-center justify-start bg-lightBackground'>
+      <Header/>
+   
           <Routes>
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/category/:category" element={<Menu />} />
+            <Route path="/search/:searchTerm" element={<Menu />} />
             <Route path="/cart" element={<CartContainer />} />
             <Route path="/checkout" element={
               <AuthRoute>
@@ -63,9 +68,19 @@ function App() {
             </AuthRoute>
             } />
 
+<Route  path="/orders/:filter?" element={
+              <AuthRoute>
+            <OrdersPage/>
+            </AuthRoute>
+            } />
+
           </Routes>
-        {/* </main> */}
-    {/* </div> */}
+
+         
+
+          
+    
+     </div> 
     </AnimatePresence>
   );
 }

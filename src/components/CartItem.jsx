@@ -7,7 +7,7 @@ import { useCart } from "../hooks/useCart";
 const CartItem = ({ item,id }) => {
   
 
-    const {   changeQuantity } = useCart();
+    const {   changeQuantity,removeFromCart } = useCart();
 
  
   
@@ -28,6 +28,8 @@ const CartItem = ({ item,id }) => {
         </p>
       </div>
 
+     
+
       {/* button section */}
       <div className="group flex items-center gap-2 ml-auto cursor-pointer">
         <motion.div
@@ -47,6 +49,16 @@ const CartItem = ({ item,id }) => {
         >
           <BiPlus className="text-gray-50 " />
         </motion.div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+      <button
+          type="button"
+          className="ml-20 bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto px-4 py-2  rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
+           onClick={()=>removeFromCart(item.food.id)}
+        >
+         Remove
+        </button>
       </div>
     </div>
   );

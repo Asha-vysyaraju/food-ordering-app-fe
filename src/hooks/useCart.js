@@ -60,8 +60,9 @@ export default function CartProvider({ children }) {
       price: food.price * newQauntity,
     };
 
+    const updatedItems=cartItems.map(item => (item.food.id === food.id ? changedCartItem : item))
     setCartItems(
-      cartItems.map(item => (item.food.id === food.id ? changedCartItem : item))
+      updatedItems.filter((item)=>item.quantity>0)
     );
   };
 

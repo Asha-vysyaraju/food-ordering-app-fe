@@ -124,7 +124,7 @@ const Header = () => {
                     </NavLink>
                     <NavLink
                       className="hover:text-red-500 text-xl text-textColor"
-                      to={"/dashboard/home"}
+                      to="/orders"
                     >
                       Orders
                     </NavLink>

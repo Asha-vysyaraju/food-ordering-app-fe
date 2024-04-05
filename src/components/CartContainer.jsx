@@ -29,27 +29,10 @@ return (
       initial={{ opacity: 0, x: 200 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 200 }}
-      className="  w-full md:w-450 h-full bg-lightBackground "
+      className=" w-full h-auto flex flex-col items-center justify-center mt-40 px-6 md:px-24 "
     >
      
-      <div className="w-full flex items-center justify-between p-4 cursor-pointer">
-        <motion.div whileTap={{ scale: 0.75 }} 
-         onClick={()=>navigate("/")}
-        >
-          <MdOutlineKeyboardBackspace className="text-textColor text-3xl" />
-        </motion.div>
-        <p className="text-textColor text-lg font-semibold">Cart</p>
-
-        <motion.p
-          whileTap={{ scale: 0.75 }}
-          className="flex items-center gap-2 p-1 px-2 my-2 bg-gray-100 rounded-md hover:shadow-md  cursor-pointer text-textColor text-base"
-          onClick={clearCart}
-        >
-          Clear <RiRefreshFill />
-        </motion.p>
-      </div>
-
-      {/* bottom section */}
+   
 
       {cart.items && cart.items.length > 0 ? (
               
@@ -65,15 +48,15 @@ return (
                 <CartItem
                   key={index}
                   item={item}
-                  id={index}
+                  
                   
                 />
               ))}
           </div>
           </div>
           {/* cart total section */}
-          <div className="py-2 flex-1 flex   justify-end relative mt-30  ">
-          <div className="w-full md:w-375 flex-1 bg-cartTotal rounded flex flex-col items-center justify-evenly px-8 py-2 mt-30">
+          <div className="py-2 flex-1 flex  justify-end relative mt-30  ">
+          <div className="w-full md:w-375 flex-1 rounded flex flex-col items-center justify-evenly px-8 py-2 mt-30">
             <div className="w-full flex items-center justify-between">
               <p className="text-gray-400 text-lg">Sub Total</p>
               <p className="text-gray-400 text-lg">$ {cart.totalPrice}</p>
@@ -86,8 +69,8 @@ return (
             <div className="w-full border-b border-gray-600 my-2"></div>
 
             <div className="w-full flex items-center justify-between">
-              <p className="text-gray-200 text-xl font-semibold">Total</p>
-              <p className="text-gray-200 text-xl font-semibold">
+              <p className="text-red-500 text-xl font-semibold">Total</p>
+              <p className="text-red-600 text-xl font-semibold">
                 ${cart.totalPrice + 2.5}
               </p>
             </div>
@@ -131,6 +114,9 @@ return (
  </motion.div>
 
  </>
+
+                           
+
 )
   
 };

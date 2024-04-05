@@ -22,9 +22,10 @@ const reducer = (state, action) => {
 
 const MainContainer = () => {
   const { cart } = useCart();
-  useEffect(() => {}, [cart.cartShow]);
+  ;
   const [state, dispatch] = useReducer(reducer, initialState);
     const { foods,categories } = state;
+    
     useEffect(()=>{
       getAllCategories().then(categories => dispatch({ type: 'CATEGORIES_LOADED', payload: categories }));
       
@@ -38,7 +39,7 @@ const MainContainer = () => {
       <Home/>
       <HomeSlider foods={foods} />
       <FilterSection foods={foods} categories={categories}/>
-      {cart.cartShow && <CartContainer />}
+      
       </div>
     
     </main>

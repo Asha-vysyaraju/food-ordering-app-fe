@@ -4,6 +4,7 @@ import { buttonClick } from '../animations';
 import { IoBasket } from "react-icons/io5";
 import {motion} from "framer-motion"
 import { useCart } from '../hooks/useCart';
+import { CiDollar } from "react-icons/ci";
 
 const Card = ({data,index}) => {
   const { addToCart } = useCart();
@@ -19,7 +20,7 @@ const Card = ({data,index}) => {
                         {data.name}
                     </p>
                     <p className='text-lg font-semibold text-red-500 flex items-center justify-center gap-1'>
-                     <HiCurrencyRupee className='text-red-500'/>{" "}
+                     <CiDollar className='text-red-500'/>{" "}
                      {parseFloat(data.price).toFixed(2)}
                     </p>
                     <motion.div {...buttonClick} className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center absolute -top-4 right-2 cursor-pointer"

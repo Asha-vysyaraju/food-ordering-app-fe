@@ -3,7 +3,9 @@ import {motion} from "framer-motion"
 import { sample_foods,categories} from "../utils/data";
 import { IoFastFood } from "react-icons/io5";
 import Card from './Card';
+
 export default function FilterSection({foods,categories}) {
+
     const [category,setCategory]=useState("fruits")
   return (
     <motion.div className='w-full flex items-start justify-start flex-col'>
@@ -22,8 +24,8 @@ export default function FilterSection({foods,categories}) {
 }
     </div>
     <div className='w-full flex items-ceneter justify-evenly flex-wrap gap-4 mt-12 '>
-      {foods && foods.filter(data=>data.category===category).map((data,i)=><Card key={i} data={data} index={i}/>)} 
-     {/* {heroData && heroData.map((data,i)=><Card key={i} data={data} index={i}/>)} */}
+      {foods && foods.filter(data=>data.category===category).map((data,i)=><Card key={i} data={data}/>)} 
+    
     </div>
    </motion.div>
   )
