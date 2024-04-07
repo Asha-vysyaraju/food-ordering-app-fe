@@ -35,7 +35,7 @@ export const logout = () => {
   };
   
   export const getAll = async searchTerm => {
-    const { data } = await axios.get('/api/users/getAll/' + (searchTerm ?? ''));
+    const { data } = await axios.get('/api/users/getAll');
     return data;
   };
   

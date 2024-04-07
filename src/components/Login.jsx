@@ -33,11 +33,7 @@ export default function Login() {
   const [params] = useSearchParams();
   const returnUrl = params.get('returnUrl');
 
-  // useEffect(() => {
-  //   if (!user) return;
-
-  //   returnUrl ? navigate(returnUrl) : navigate('/');
-  // }, [user]);
+ 
 
   const handleSignin = async () => {
     console.log(email,password)
@@ -90,57 +86,7 @@ export default function Login() {
   //   });
   // };
 
-  // const signUpwithEmailPass=async ()=>{
-  //   if((userEmail=== ""|| password==="" || confirm_password==="")){
-  //     console.log("they are empty")
-  //   }else{
-  //     if(password===confirm_password){
-  //       setuserEmail("")
-  //                 setconfirm_password("")
-  //                 setpassword("")
-  //        await createUserWithEmailAndPassword(firebaseAuth,userEmail,password).then(userCred=>{
-  //         firebaseAuth.onAuthStateChanged((cred) => {
-  //           if (cred) {
-  //             cred.getIdToken().then((token) => {
-             
-  //               validateUserJWTToken(token).then(data=>{
-                  
-  //                 console.log(data)
-  //               }
-    
-  //               )
-  //               navigate("/",{replace:true})
-                
-  //             });
-  //           }
-  //         });
-  //        })
-    
-  //     }else{
-
-  //     }
-  //   }
-  // }
-//   const signInWithEmailPass=async ()=>{
-// if(userEmail!=="" && password!==""){
-// await signInWithEmailAndPassword(firebaseAuth,userEmail,password).then(userCred=>{
-//   firebaseAuth.onAuthStateChanged((cred) => {
-//     if (cred) {
-//       cred.getIdToken().then((token) => {
-//         console.log(token);
-//         validateUserJWTToken(token).then(data=>{
-//           console.log(data)
-
-//       })
-//       navigate("/",{replace:true})
-//       });
-//     }
-//   });
-// })
-// }else{
-//   //alert message
-// }
-//   }
+ 
   return (
     <div className="w-screen h-screen  relative flex items-center justify-center">
      

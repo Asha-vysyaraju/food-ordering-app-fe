@@ -27,6 +27,8 @@ import Dashboard from './components/Dashboard';
 import AdminRoute from './components/AdminRoute';
 import FoodsAdminPage from './components/FoodsAdminPage';
 import FoodEditPage from './components/FoodEditPage';
+import UsersPage from './components/UsersPage';
+import UserEdit from './components/UserEdit';
 
 function App() {
   const { showLoading, hideLoading,isLoading } = useLoading();
@@ -107,6 +109,24 @@ function App() {
         element={
           <AdminRoute>
             <FoodEditPage />
+          </AdminRoute>
+        }
+      />
+
+<Route
+        path="/admin/users"
+        element={
+          <AdminRoute>
+            <UsersPage />
+          </AdminRoute>
+        }
+      />
+
+<Route
+        path="/admin/editUser/:userId"
+        element={
+          <AdminRoute>
+            <UserEdit />
           </AdminRoute>
         }
       />
