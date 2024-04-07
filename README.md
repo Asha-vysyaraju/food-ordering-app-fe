@@ -22,6 +22,9 @@ Admin details:jane@gmail.com /12345
 ![image](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/201ad569-6f2c-4dc1-88b5-01752d171cbd)
 
 
+![Screenshot 2024-04-07 064734](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/9da79cb3-e75c-4a26-b3be-1dc8dbbc55b1)
+![Screenshot 2024-04-07 064822](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/65c47231-be56-46b9-ba5f-ef568ab1604f)
+
 
 
 
