@@ -1,3 +1,38 @@
+![Screenshot 2024-04-06 055958](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/f715cc39-56dc-46bf-9b23-abc9e8e42b02) 
+![Screenshot 2024-04-06 060015](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/6bb79505-a8de-4097-b39a-a8a4396b29c5)
+![Screenshot 2024-04-06 060055](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/6a700b61-4056-40ec-82a2-20f07ae4febf)
+![Screenshot 2024-04-06 060117](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/c1acc67c-3efb-4390-8b54-c63ed6d63172)
+![Screenshot 2024-04-06 060233](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/b791080d-4d43-4a33-92f8-e13cd59b91d1) ![Screenshot 2024-04-06 060543](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/4f4950cc-7038-4294-8ec1-9390989e7e7f)
+
+![Screenshot 2024-04-06 060625](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/f26ebb7c-87ae-4ef1-aed0-465b1bdd9bc2)
+
+![Screenshot 2024-04-06 060709](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/763cbc83-1be1-4983-8cbd-b731f483e015)
+
+![image](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/fef3a749-f210-40d8-abc2-abafb04e09b4)
+
+![image](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/7af39df3-5bcd-4e4a-8f0c-be1bb0d611be)
+
+![image](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/af2770ba-5d8a-4dcb-9e0b-991e7a80f128)
+
+![image](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/d1815c5a-3ca3-401f-872a-42c442d7cc89)
+
+![image](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/201ad569-6f2c-4dc1-88b5-01752d171cbd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
