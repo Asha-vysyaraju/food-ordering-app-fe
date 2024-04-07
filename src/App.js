@@ -23,6 +23,10 @@ import OrderTrackPage from './components/OrderTrackPage';
 import ProfilePage from './components/ProfilePage';
 import OrdersPage from './components/OrdersPage';
 import Menu from './components/Menu';
+import Dashboard from './components/Dashboard';
+import AdminRoute from './components/AdminRoute';
+import FoodsAdminPage from './components/FoodsAdminPage';
+import FoodEditPage from './components/FoodEditPage';
 
 function App() {
   const { showLoading, hideLoading,isLoading } = useLoading();
@@ -74,6 +78,38 @@ function App() {
             </AuthRoute>
             } />
 
+
+<Route  path="/dashboard" element={
+              <AuthRoute>
+           <Dashboard />
+            </AuthRoute>
+            } />
+
+<Route
+        path="/admin/foods/"
+        element={
+          <AdminRoute>
+            <FoodsAdminPage />
+          </AdminRoute>
+        }
+      /> 
+
+<Route
+        path="/admin/addFood"
+        element={
+          <AdminRoute>
+            <FoodEditPage />
+          </AdminRoute>
+        }
+      />
+      <Route
+        path="/admin/editFood/:foodId"
+        element={
+          <AdminRoute>
+            <FoodEditPage />
+          </AdminRoute>
+        }
+      />
           </Routes>
 
          

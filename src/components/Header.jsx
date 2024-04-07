@@ -35,7 +35,7 @@ const Header = () => {
           <p className="text-headingColor text-xl font-bold"> PixelPalate</p>
         </Link>
         <div className="flex items-center gap-8">
-          <motion.ul
+          <ul
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
@@ -73,7 +73,7 @@ const Header = () => {
             >
               About Us
             </NavLink>
-          </motion.ul>
+          </ul>
 
           <motion.div
             {...buttonClick}
@@ -110,12 +110,18 @@ const Header = () => {
                     onMouseLeave={() => setIsMenu(false)}
                     className="px-6 py-4 w-48 bg-lightOverlay backdrop-blur-md rounded-md shadow-md absolute top-12 right-0 flex flex-col gap-2"
                   >
+
+
+                    {user.isAdmin &&(
+                     
                     <NavLink
                       className="hover:text-red-500 text-xl text-textColor"
-                      to={"/dashboard/home"}
+                      to={"/dashboard"}
                     >
-                      Dashboard
+                       Dashboard
                     </NavLink>
+                   )}
+
                     <NavLink
                       className="hover:text-red-500 text-xl text-textColor"
                       to={"/profile"}
