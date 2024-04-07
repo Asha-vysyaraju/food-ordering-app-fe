@@ -1,6 +1,6 @@
 This Pixelpalate app is a food ordering and management app where user can order their favourite food and track the order details.Admin can also manage food dishes and users by adding,deleting and updating.All axios CRUD operations are performed.
 
-1.Users can register and login through the website by using the Login option
+1.Users can register and login through the website by using the Login option.
 2.Users can view the homepage where they can see hot dishes ,favorite dishes and special category of the month and also foods to the cart.
 3.Menu option displays the various categories and all food dishes and can add to cart.
 4.Cart page displays items you have added to the cart,user can change quantity or remove the dish and can see order details like total items ,subtotal ,delivery charges and total and proceed for checkout.User can only proceed for checkout after they logged in.
