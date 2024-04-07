@@ -1,3 +1,6 @@
+Only admin can view admin dashboard where can add foods,delete or edit.
+Admin details:jane@gmail.com /12345
+
 ![Screenshot 2024-04-06 055958](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/f715cc39-56dc-46bf-9b23-abc9e8e42b02) 
 ![Screenshot 2024-04-06 060015](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/6bb79505-a8de-4097-b39a-a8a4396b29c5)
 ![Screenshot 2024-04-06 060055](https://github.com/Asha-vysyaraju/food-ordering-app-fe/assets/18022094/6a700b61-4056-40ec-82a2-20f07ae4febf)
