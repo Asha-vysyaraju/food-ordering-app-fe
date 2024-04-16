@@ -17,8 +17,8 @@ export default function FilterSection({foods,categories}) {
     </div>
 
     <div className='w-full overflow-x-scroll pt-6 flex items-center justify-center gap-6 py-8'>
-{categories && categories.map((data,i)=>(
-    <FilterCard data={data} category={category} setCategory={setCategory} index={i} />
+{categories && categories.map((data,index)=>(
+    <FilterCard key={index} data={data} category={category} setCategory={setCategory} />
 ))
 
 }

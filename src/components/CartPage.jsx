@@ -156,7 +156,7 @@ const CartPage = () => {
                             variant="contained"
                             color="error"
                             disabled={cart.length === 0}
-                            // onClick={() => setOpen(true)}
+                            
                         >
                             Proceed to Checkout
                         </Button>

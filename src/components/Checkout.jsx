@@ -15,14 +15,12 @@ import OrderItemsList from './OrderItemsList';
 import Map from './Map/Map';
 
 
-
-
-// import Map from '../../components/Map/Map';
 export default function CheckoutPage() {
   const { cart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
   const [order, setOrder] = useState({ ...cart });
+  const { clearCart } = useCart();
 
   const [name,setName]=useState(user.name)
   const [address,setAddress]=useState(user.address)
@@ -33,13 +31,15 @@ export default function CheckoutPage() {
       return;
     }
 
-    await createOrder({ ...order, name: name, address: address});
-    navigate('/payment');
+     await createOrder({ ...order, name: name, address: address});
+     clearCart();
+     navigate('/payment');
+    
   };
 
   return (
     <>
-       <div className="w-full h-full  relative flex items-start justify-between bg-lightBackground gap-2 ">
+         <div className="w-full h-full  relative flex items-start justify-between bg-lightBackground gap-2 ">
        <div className="flex flex-col items-center h-full w-1/2  backdrop-blur-md p-4 px-4 py-40 gap-6">
        <p className="text-3xl font-semibold text-headingColor ">
          Order Form
@@ -84,16 +84,17 @@ export default function CheckoutPage() {
                 className="w-full p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg mt-20"
                 onClick={submit }
               >
-              Go to Payments
+             Submit Payment
               </motion.button>
           </div> 
               
        </div>
-       </div>
+       </div>  
+
 
       
               
-        
+      
         
        
        
@@ -102,5 +103,6 @@ export default function CheckoutPage() {
 
      
     </>
+ 
   );
 }

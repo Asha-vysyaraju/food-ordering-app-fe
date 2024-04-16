@@ -28,9 +28,9 @@ import { pay } from '../services/orderService';
     const navigate = useNavigate();
     const [{ isPending }] = usePayPalScriptReducer();
     const { showLoading, hideLoading } = useLoading();
-    // useEffect(() => {
-    //   isPending ? showLoading() : hideLoading();
-    // },[]);
+    useEffect(() => {
+      isPending ? showLoading() : hideLoading();
+    },[]);
   
     const createOrder = (data, actions) => {
       return actions.order.create({
