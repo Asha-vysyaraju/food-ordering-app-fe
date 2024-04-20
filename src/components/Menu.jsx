@@ -28,28 +28,35 @@ export default function Menu() {
   const { searchTerm, category } = useParams();
   const { addToCart,removeFromCart,cart } = useCart();
 
+  // useEffect(() => {
+  //   getAllCategories().then((categories) =>
+  //     dispatch({ type: "CATEGORIES_LOADED", payload: categories })
+  //   );
+
+  //   const loadFoods = category
+  //     ? getAllByCategory(category)
+  //     : searchTerm
+  //     ? search(searchTerm)
+  //     : getAll();
+
+  //   loadFoods.then((foods) =>
+  //     dispatch({ type: "FOODS_LOADED", payload: foods })
+  //   );
+  // }, [searchTerm, category]);
+
   useEffect(() => {
-    getAllCategories().then((categories) =>
-      dispatch({ type: "CATEGORIES_LOADED", payload: categories })
-    );
-
-    const loadFoods = category
-      ? getAllByCategory(category)
-      : searchTerm
-      ? search(searchTerm)
-      : getAll();
-
+    const loadFoods = getAll();
     loadFoods.then((foods) =>
-      dispatch({ type: "FOODS_LOADED", payload: foods })
-    );
-  }, [searchTerm, category]);
+    dispatch({ type: "FOODS_LOADED", payload: foods })
+  );
+  }, []);
   return (
     <>
       <div className="w-full h-auto flex flex-col items-center justify-center mt-40 px-6 md:px-24 gap-12 bg-lightBackground">
-        <Search />
+        {/* <Search /> */}
  
       
-        {categories && (
+        {/* {categories && (
       
       <div class="flex flex-col gap-6 w-max">
       <div class="flex divide-x row">
@@ -72,7 +79,7 @@ export default function Menu() {
              ))}
              </div>
            </div>
-         )}
+         )} */}
 
 <div className='w-full flex items-ceneter justify-evenly flex-wrap gap-4 mt-12 '>
 { foods.map((data)=>(
