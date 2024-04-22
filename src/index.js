@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { LoadingProvider } from './hooks/useLoading';
 import './interceptors/authInterceptor';
+import FoodsProvider from './hooks/useFoods';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
   <BrowserRouter>
    <LoadingProvider>
    <AuthProvider>
+   <FoodsProvider>
    <CartProvider>
     <App />
     <ToastContainer
@@ -32,6 +34,7 @@ root.render(
               theme="light"
             />
     </CartProvider>
+    </FoodsProvider>
     </AuthProvider>
     </LoadingProvider>
     </BrowserRouter> 

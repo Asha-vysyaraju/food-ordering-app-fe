@@ -36,17 +36,19 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 export default function UsersPage() {
 
-    const [users,setUsers]=useState()
+    
     const auth = useAuth();
+    const {users}=useAuth();
+    //const {users,setUsers}=useState(auth.users)
   const navigate=useNavigate()
-    useEffect(() => {
-      loadUsers();
-    }, []);
+    // useEffect(() => {
+    //   loadUsers();
+    // }, []);
   
-    const loadUsers = async () => {
-      const users = await getAll();
-      setUsers(users);
-    };
+    // const loadUsers = async () => {
+    //   const users = await getAll();
+    //   setUsers(users);
+    // };
     const handleToggleBlock=async (userId)=>{
         const isBlocked=await toggleBlock(userId)
     }

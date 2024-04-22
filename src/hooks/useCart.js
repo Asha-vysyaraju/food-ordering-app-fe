@@ -6,7 +6,7 @@ const EMPTY_CART = {
   items: [],
   totalPrice: 0,
   totalCount: 0,
-  cartShow: true,
+ 
 };
 
 export default function CartProvider({ children }) {
@@ -14,7 +14,7 @@ export default function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState(initCart.items);
   const [totalPrice, setTotalPrice] = useState(initCart.totalPrice);
   const [totalCount, setTotalCount] = useState(initCart.totalCount);
-  const [cartShow, setCartShow] = useState(initCart.cartShow);
+ 
 
   useEffect(() => {
     const totalPrice = sum(cartItems.map(item => item.price));
@@ -28,10 +28,10 @@ export default function CartProvider({ children }) {
         items: cartItems,
         totalPrice,
         totalCount,
-        cartShow,
+        
       })
     );
-  }, [cartItems,cartShow]);
+  }, [cartItems]);
 
   function getCartFromLocalStorage() {
     const storedCart = localStorage.getItem(CART_KEY);
@@ -42,9 +42,7 @@ export default function CartProvider({ children }) {
     return items.reduce((prevValue, curValue) => prevValue + curValue, 0);
   };
 
-  const showCart = () => {
-    setCartShow(!cartShow)
-  };
+ 
 
   const removeFromCart = foodId => {
     const filteredCartItems = cartItems.filter(item => item.food.id !== foodId);
@@ -91,7 +89,7 @@ export default function CartProvider({ children }) {
         changeQuantity,
         addToCart,
         clearCart,
-        showCart,
+        
       }}
     >
       {children}

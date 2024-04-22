@@ -16,6 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
 import { Link, useNavigate } from "react-router-dom";
 import AdminHeader from "./AdminHeader";
+import { useFoods } from "../hooks/useFoods";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -39,16 +40,19 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function FoodsAdminPage() {
     const navigate=useNavigate();
-  const [foods, setFoods] = useState([]);
-  useEffect(() => {
-    loadFoods();
-  }, []);
+  
+  const {  foods } = useFoods();
+ // const { state: { foods}, dispatch } = useFoods();
+   const [foodItems, setFoods] = useState(foods);
+  // useEffect(() => {
+  //   loadFoods();
+  // }, []);
 
-  const loadFoods=async ()=>{
-    const loadedfoods = await getAll();
-    console.log("FoodsAdmin page",loadedfoods)
-    setFoods(loadedfoods);
-  }
+  // const loadFoods=async ()=>{
+  //   const loadedfoods = await getAll();
+  //   console.log("FoodsAdmin page",loadedfoods)
+  //   setFoods(loadedfoods);
+  // }
 
   const deleteFood = async (food) => {
     const confirmed = window.confirm(`Delete Food ${food.name}?`);
@@ -56,7 +60,15 @@ export default function FoodsAdminPage() {
 
     await deleteById(food.id);
     toast.success(`"${food.name}" Has Been Removed!`);
-    setFoods(foods.filter((f) => f.id !== food.id));
+    setFoods( foodItems.filter((f) => f.id !== food.id))
+    localStorage.setItem(
+      ('foods'),
+      JSON.stringify({
+        foods:foodItems,
+        
+      })
+    );
+    
   };
   return (
     <>
@@ -76,7 +88,7 @@ export default function FoodsAdminPage() {
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           
           <TableBody>
-            {foods.map((food) => (
+            {foodItems.map((food) => (
               <StyledTableRow key={food.id}>
                 <StyledTableCell component="th" scope="row">
                   <img

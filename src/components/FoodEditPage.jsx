@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { add, getById, update } from "../services/foodService";
 import { toast } from "react-toastify";
 import { uploadImage } from "../services/uploadService";
+import { useFoods } from "../hooks/useFoods";
 
 export default function FoodEditPage() {
   const {
@@ -16,6 +17,7 @@ export default function FoodEditPage() {
     reset,
   } = useForm();
   const { foodId } = useParams();
+  const {  foods } = useFoods();
   const [imageUrl, setImageUrl] = useState();
   const isEditMode = !!foodId;
  
@@ -41,7 +43,9 @@ export default function FoodEditPage() {
     }
     const newFood = await add(food);
     toast.success(`Food "${food.name}" added successfully!`);
-    navigate('/admin/editFood/' + newFood.id, { replace: true });
+  //  localStorage.setItem('foods', JSON.stringify([...foods, newFood]))
+     //navigate('/admin/editFood/' + newFood.id, { replace: true });
+   navigate('/admin/foods',{ replace: true })
   };
 
   const upload = async event => {

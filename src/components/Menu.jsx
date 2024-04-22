@@ -9,24 +9,26 @@ import { useCart } from "../hooks/useCart";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import Search from "./Search";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
+import { useFoods } from "../hooks/useFoods";
 
-const initialState = { foods: [], categories: [] };
+// const initialState = { foods: [], categories: [] };
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "FOODS_LOADED":
-      return { ...state, foods: action.payload };
-    case "CATEGORIES_LOADED":
-      return { ...state, categories: action.payload };
-    default:
-      return state;
-  }
-};
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case "FOODS_LOADED":
+//       return { ...state, foods: action.payload };
+//     case "CATEGORIES_LOADED":
+//       return { ...state, categories: action.payload };
+//     default:
+//       return state;
+//   }
+// };
 export default function Menu() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const { foods, categories } = state;
+ // const [state, dispatch] = useReducer(reducer, initialState);
+  //const { foods, categories } = state;
   const { searchTerm, category } = useParams();
   const { addToCart,removeFromCart,cart } = useCart();
+  const {  foods } = useFoods();
 
   // useEffect(() => {
   //   getAllCategories().then((categories) =>
@@ -44,12 +46,7 @@ export default function Menu() {
   //   );
   // }, [searchTerm, category]);
 
-  useEffect(() => {
-    const loadFoods = getAll();
-    loadFoods.then((foods) =>
-    dispatch({ type: "FOODS_LOADED", payload: foods })
-  );
-  }, []);
+
   return (
     <>
       <div className="w-full h-auto flex flex-col items-center justify-center mt-40 px-6 md:px-24 gap-12 bg-lightBackground">
@@ -57,7 +54,7 @@ export default function Menu() {
  
       
         {/* {categories && (
-      
+
       <div class="flex flex-col gap-6 w-max">
       <div class="flex divide-x row">
               <Link
@@ -74,7 +71,7 @@ export default function Menu() {
                 focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-r-none border-r-0 "
                 to={`/category/${category.name}`}
               >
-                {category.name} ({category.count})
+                {category.name} 
               </Link>
              ))}
              </div>
